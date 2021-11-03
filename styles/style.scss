@@ -1,0 +1,107 @@
+@import './utils/mixins';
+@import './layout/fisrt-step';
+@import './layout/second-step';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1080px) {
+    html {
+        font-size: 93.75%;
+    }
+}
+
+@media (max-width: 720px) {
+    html {
+        font-size: 87.5%;
+    }
+}
+
+:root {
+    --color-gradient-lizard: hsl(261, 73%, 60%), hsl(261, 72%, 63%);
+    --color-gradient-rock: linear-gradient(rgb(220, 46, 78), hsl(349, 70%, 56%));
+    --color-gradient-paper: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+    --color-gradient-scissors: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+
+    --color-dark-text:  hsl(229, 25%, 31%);
+    --color-score-text: hsl(229, 64%, 46%);
+    --color-header-outline: hsl(217, 16%, 45%);
+}
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background: radial-gradient(134.34% 134.34% at 50% 0,#1f3757 0,#131537 100%);
+    min-height: 100vh;
+}
+
+.main {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    padding: 2rem 5%;
+}
+
+.header {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border: 2px solid var(--color-header-outline);
+    border-radius: 10px;
+
+    padding: 1rem;
+
+    ul {
+        list-style: none;
+
+        li {
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1.8rem;
+            color: #fff;
+        }
+    }   
+
+    div {
+        border-radius: 10px;
+        background-color: #fff;
+        color: var(--color-dark-text);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding: 1rem 2rem;
+
+        span {
+            line-height: .8rem;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            line-height: 3.5rem;
+        }
+    }
+}
+
+button {
+    border: 0;
+    cursor: pointer;
+}
+
+.btnpaper {
+    @include button(var(--color-gradient-paper), #3459c3);
+}
+.btnscissors {
+    @include button(var(--color-gradient-scissors), #c86d26);
+}
+.btnrock {
+    grid-column: 1/ 3;
+    @include button(var(--color-gradient-rock), #9e2f34);
+}

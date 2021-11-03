@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Pedra, Papel, Tesoura</title>
+</head>
+<body>
+    <main class="main">
+        <header class="header">
+            <ul>
+                <li>Pedra</li>
+                <li>Papel</li>
+                <li>Tesoura</li>
+            </ul>
+            <div>
+                <span>
+                    Pontos
+                </span>
+                <h1 data-js="point">
+                    0
+                </h1>
+            </div>
+        </header>
+
+        <section data-js="fisrtStep" class="fisrt__step show">
+            <!-- <img class="bg" src="/images/bg-triangle.svg" alt=""> -->
+            <button
+                data-id="0"
+                class="fisrt__step_paper"
+                aria-label="Papel"
+            >
+                <img src="/images/icon-paper.svg" alt="Mão aberta">    
+            </button>
+            <button
+                data-id="1"
+                class="fisrt__step_scissors"
+                aria-label="Tesoura"
+            >
+                <img src="/images/icon-scissors.svg" alt="Mão em formato de tesoura">
+            </button>
+            <button
+                data-id="2"
+                class="fisrt__step_rock"
+                aria-label="Pedra"
+            >
+                <img src="/images/icon-rock.svg" alt="Mão fechada">
+            </button>
+        </section>
+
+        <section data-js="secondStep" class="second_step">
+            <div class="containerPicked">
+                <h2>Você escolheu</h2>
+                <div data-js="containerBtnUser">
+
+                </div>
+            </div>
+            <div data-js="toBackHome" class="second_step_back">
+                <h1 data-js="message"></h1>
+                <button data-js="btnPlayAgain" >Jogar novamente</button>
+            </div>
+            <div class="containerPicked">
+                <h2>Adversário escolheu</h2>
+                <div data-js="containerBtnComputer" class="container-btn">
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
+
+<!-- <button
+data-id="1"
+class="second__step_scissors"
+aria-label="Tesoura"
+>
+    <img src="/images/icon-scissors.svg" alt="Mão em formato de tesoura">
+</button> -->
