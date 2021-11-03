@@ -11,6 +11,24 @@ const btnPlayAgain = document.querySelector('[data-js="btnPlayAgain"]')
 const options = [ 'paper', 'scissors', 'rock' ]
 let point = 0
 
+function useIsWinner() {
+    message.innerHTML = 'Você ganhou'
+    btnPlayAgain.classList.remove('lose')
+    containerBtnUser.classList.add('active')
+    containerBtnComputer.classList.remove('active')
+    point++
+    updatePoint()
+}
+
+function computerIsWinner() {
+    message.innerHTML = 'Você perdeu'
+    btnPlayAgain.classList.add('lose')
+    containerBtnUser.classList.remove('active')
+    containerBtnComputer.classList.add('active')
+    point > 0 && point--
+    updatePoint()
+}
+
 function toggleShowOptionsToBack() {
     containerToBackHome.classList.toggle('show')
 }
@@ -52,17 +70,7 @@ function showWhoWin( userOptions, computerOptions, userWon ) {
             return 
         }
 
-        if ( userWon ) {
-            message.innerHTML = 'Você ganhou'
-            btnPlayAgain.classList.remove('lose')
-            point++
-        } else {
-            message.innerHTML = 'Você perdeu'
-            btnPlayAgain.classList.add('lose')
-            point--
-        }
-
-        updatePoint()
+        userWon ? useIsWinner() : computerIsWinner()
 
         toggleShowOptionsToBack()
     }, 500);

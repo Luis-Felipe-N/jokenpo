@@ -20,12 +20,13 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 3rem;
 
         h2 {
             color: #fff;
             letter-spacing: 1px;
             text-transform: uppercase;
-            margin-bottom: 3rem;
+            // margin-bottom: 3rem;
         }
     
         button {
@@ -43,13 +44,17 @@
         }
         
         .container-btn {
-            animation: winAnimation 2s .5s forwards;
-            position: relative;
-            z-index: -1;
             background: linear-gradient(to bottom right, #1f3757,#131537, #131537);
             border-radius: 100%;
             width: 12rem;
             height: 12rem;
+        }
+        
+        .active {
+            position: relative;
+            z-index: -1;
+            border-radius: 100%;
+            animation: winAnimation 1s .5s forwards;
         }
     }
     &_back {
