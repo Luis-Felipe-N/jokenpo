@@ -47,8 +47,7 @@ Follow the steps below:
 $ Live Server
 
 # Start the project
-$ npm start
-$ yarn start
+$ Go Live
 ```
 The app will be available for access on your browser at http://127.0.0.1:5500/index.html
 

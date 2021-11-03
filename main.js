@@ -11,13 +11,22 @@ const btnPlayAgain = document.querySelector('[data-js="btnPlayAgain"]')
 const options = [ 'paper', 'scissors', 'rock' ]
 let point = 0
 
-function useIsWinner() {
+function draw() {
+    message.innerHTML = 'Deu empate'
+    toggleShowOptionsToBack()
+    containerBtnUser.classList.remove('active')
+    containerBtnComputer.classList.remove('active')
+    btnPlayAgain.classList.remove('lose')
+}
+
+function userIsWinner() {
     message.innerHTML = 'Você ganhou'
     btnPlayAgain.classList.remove('lose')
     containerBtnUser.classList.add('active')
     containerBtnComputer.classList.remove('active')
     point++
     updatePoint()
+    toggleShowOptionsToBack()
 }
 
 function computerIsWinner() {
@@ -27,6 +36,7 @@ function computerIsWinner() {
     containerBtnComputer.classList.add('active')
     point > 0 && point--
     updatePoint()
+    toggleShowOptionsToBack()
 }
 
 function toggleShowOptionsToBack() {
@@ -64,15 +74,8 @@ function showWhoWin( userOptions, computerOptions, userWon ) {
         appendButtonComputer(computerOptions)
 
         console.log(userWon)
-        if ( userWon === 'empate' ) {
-            message.innerHTML = 'Deu empate'
-            toggleShowOptionsToBack()
-            return 
-        }
-
-        userWon ? useIsWinner() : computerIsWinner()
-
-        toggleShowOptionsToBack()
+        if ( userWon === 'empate' ) return draw()
+        userWon ? userIsWinner() : computerIsWinner()
     }, 500);
 
     
