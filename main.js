@@ -61,7 +61,7 @@ function appendButtonUser(option) {
 
 function appendButtonComputer(option) {
     const buttonComputer = createNewButton('button', `btn${options[option]}`, option) 
-    console.log(buttonComputer)
+    
     containerBtnComputer.replaceChildren(buttonComputer)
 }
 
@@ -73,7 +73,7 @@ function showWhoWin( userOptions, computerOptions, userWon ) {
     setTimeout(() => {
         appendButtonComputer(computerOptions)
 
-        console.log(userWon)
+        
         if ( userWon === 'empate' ) return draw()
         userWon ? userIsWinner() : computerIsWinner()
     }, 500);
