@@ -1,5 +1,6 @@
 .fisrt__step.show {
     display: grid;
+    animation: homeAnimation .5s;
 }
 
 .fisrt__step {
@@ -11,6 +12,7 @@
     gap: 2rem;
 
     background: url(/images/bg-triangle.svg) no-repeat center;
+    background-position-y: 2.5rem;
 
     .bg {
         position: absolute;
@@ -65,5 +67,15 @@
                 }
             }
         }
+    }
+}
+
+@keyframes homeAnimation {
+    from {
+        // gap: 3rem;
+        transform: rotate(360deg);
+    } to {
+        // gap: 2rem;
+        transform: rotate(0);
     }
 }

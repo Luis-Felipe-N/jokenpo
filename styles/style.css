@@ -1,6 +1,8 @@
 .fisrt__step.show {
   display: -ms-grid;
   display: grid;
+  -webkit-animation: homeAnimation .5s;
+          animation: homeAnimation .5s;
 }
 
 .fisrt__step {
@@ -12,6 +14,7 @@
   place-items: center;
   gap: 2rem;
   background: url(/images/bg-triangle.svg) no-repeat center;
+  background-position-y: 2.5rem;
 }
 
 .fisrt__step .bg {
@@ -175,6 +178,28 @@
   .fisrt__step button:hover::before {
     width: 14rem;
     height: 14rem;
+  }
+}
+
+@-webkit-keyframes homeAnimation {
+  from {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes homeAnimation {
+  from {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
   }
 }
 

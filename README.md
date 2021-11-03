@@ -1,4 +1,4 @@
-# jokenpo
+<h1 align="center">Jokepô</h1>
 
 Projeto de um game(Pedra, Papel, Tesoura) feito em javascript com layout proposto por [FrontEnd Mentor](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH).
 
@@ -14,7 +14,6 @@ Projeto de um game(Pedra, Papel, Tesoura) feito em javascript com layout propost
 </h4>
 
 <p align="center">
- <a href="#Features">Features</a> •
  <a href="#Technologies">Technologies</a> •
  <a href="#Getting-started">Getting started</a> •
  <a href="#autor">Autor</a>
@@ -23,20 +22,14 @@ Projeto de um game(Pedra, Papel, Tesoura) feito em javascript com layout propost
 
 ![Jokenpô](https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/fnzuxyyl1wwyscqgaiyc.jpg)
 
-## Features 
-
-- [x] Skeleton
-- [x] Carrosel
-- [x] Pesquisar animes
-- [x] Visualizar informação de um anime
 
 
 ## Technologies
 
 This project was developed using the following technologies:
 
-- [NextJS](https://nextjs.org/)
-- [DatoCMS](https://www.datocms.com/)
+- JavaScript
+- SCSS
 
 
 ## Getting started
@@ -44,8 +37,8 @@ This project was developed using the following technologies:
 Clone the project and access the folder.
 
 ```bash
-$ git clone https://github.com/Luis-Felipe-N/Anime.git
-$ cd Anime
+$ git clone https://github.com/Luis-Felipe-N/jokenpo.git
+$ cd jokenpo
 ```
 
 Follow the steps below:
