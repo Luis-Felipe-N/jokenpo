@@ -1,6 +1,5 @@
 .fisrt__step.show {
     display: grid;
-    animation: homeAnimation .5s;
 }
 
 .fisrt__step {
@@ -67,15 +66,5 @@
                 }
             }
         }
-    }
-}
-
-@keyframes homeAnimation {
-    from {
-        // gap: 3rem;
-        transform: rotate(360deg);
-    } to {
-        // gap: 2rem;
-        transform: rotate(0);
     }
 }

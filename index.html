@@ -72,8 +72,26 @@
                 </div>
             </div>
         </section>
+        <div class="container__btn-openModal">
+            <button data-js="btn-open-modal" >Regras</button>
+        </div>
     </main>
+    <div data-js="modal" class="modal-container">
+        <div class="modal ">
+            <div>
+                <h1>Regras</h1>
+                <button
+                    data-js="bnbtn-close-modal"
+                    aria-label="Fechar modal"
+                >
+                    <img src="/images/icon-close.svg" alt="Icone de um x">
+                </button>
+            </div>
+            <img class="rules" src="/images/image-rules.svg" alt="">
+        </div>
+    </div>
 
     <script src="main.js"></script>
+    <script src="modal.js"></script>
 </body>
 </html>

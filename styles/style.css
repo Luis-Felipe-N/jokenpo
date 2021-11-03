@@ -1,8 +1,6 @@
 .fisrt__step.show {
   display: -ms-grid;
   display: grid;
-  -webkit-animation: homeAnimation .5s;
-          animation: homeAnimation .5s;
 }
 
 .fisrt__step {
@@ -181,28 +179,6 @@
   }
 }
 
-@-webkit-keyframes homeAnimation {
-  from {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-  to {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-}
-
-@keyframes homeAnimation {
-  from {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-  to {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-}
-
 .second_step.show {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -225,6 +201,7 @@
 }
 
 .second_step .containerPicked {
+  border: 4em #9ff;
   width: 20rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -401,6 +378,85 @@
   }
 }
 
+.modal-container {
+  display: none;
+}
+
+.modal-container.active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.modal-container.active .modal {
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-container.active .modal > div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2rem;
+}
+
+.modal-container.active .modal > div h1 {
+  color: #1f3757;
+}
+
+.modal-container.active .modal > div button {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 100%;
+  font-size: 0;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.modal-container.active .modal > div button:hover {
+  background-color: rgba(152, 159, 169, 0.637);
+  -webkit-box-shadow: 0 0 0 4px rgba(152, 159, 169, 0.637);
+          box-shadow: 0 0 0 4px rgba(152, 159, 169, 0.637);
+}
+
+@media (max-width: 550px) {
+  .modal-container .modal {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+  .modal-container .modal .rules {
+    max-width: 25rem;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -434,6 +490,7 @@ body {
   font-family: 'Barlow Semi Condensed', sans-serif;
   background: radial-gradient(134.34% 134.34% at 50% 0, #1f3757 0, #131537 100%);
   min-height: 100vh;
+  width: 100%;
 }
 
 .main {
@@ -630,5 +687,32 @@ button {
   background-color: rgba(162, 165, 169, 0.779);
   -webkit-transition: .2s;
   transition: .2s;
+}
+
+.container__btn-openModal {
+  width: 100%;
+  margin-top: auto;
+}
+
+.container__btn-openModal button {
+  position: absolute;
+  right: 5%;
+  bottom: 2rem;
+  border: 2px solid #fff;
+  color: #fff;
+  font-weight: 600;
+  background-color: transparent;
+  padding: .7rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  -webkit-transition: .2s;
+  transition: .2s;
+  margin-left: auto;
+}
+
+.container__btn-openModal button:hover {
+  -webkit-filter: brightness(0.5);
+          filter: brightness(0.5);
 }
 /*# sourceMappingURL=style.css.map */
