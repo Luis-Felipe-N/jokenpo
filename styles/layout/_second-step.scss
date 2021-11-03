@@ -41,8 +41,11 @@
                 height: 14rem;
             }
         }
-
+        
         .container-btn {
+            animation: winAnimation 2s .5s forwards;
+            position: relative;
+            z-index: -1;
             background: linear-gradient(to bottom right, #1f3757,#131537, #131537);
             border-radius: 100%;
             width: 12rem;
@@ -90,7 +93,9 @@
 
 @media (max-width: 850px) {
     .second_step {
+        gap: 1rem;
         .containerPicked {
+            flex-direction: column-reverse;
             max-width: 15rem;
             h2 { 
                 font-size: 1rem;
@@ -113,7 +118,6 @@
             .container-btn{
                 width: 8rem;
                 height: 8rem;
-                animation: winAnimation 1s infinite;
             }
         }
 
@@ -132,19 +136,22 @@
 }
 
 @keyframes winAnimation {
-    // 0% {
-    //     box-shadow: 0 0 0 10px, 0 0 20px, 0 0 30px;
-    // }50% {
-
-    // }
-    // 100% {
-
-    // }
-
-    from {
-        box-shadow: 0 0 0 10px red, 0 0 20px green, 0 0 30px yellow;
+    25% {
+        box-shadow: 0 0 0  hsla(214, 4%, 65%, 0.779), 0 0 0 hsla(214, 4%, 65%, 0.4), 0 0 0 hsla(214, 4%, 65%, 0.2);
     }
-    to {
-        box-shadow: 0 0 0 0px, 0 0 0px, 0 0 0px;
-    } 
+    50% {
+        box-shadow: 0 0 0 3rem hsla(214, 4%, 65%, 0.779), 0 0 0 hsla(214, 4%, 65%, 0.4), 0 0 0 hsla(214, 4%, 65%, 0.2);
+    }75% {
+        box-shadow: 0 0 0 3rem hsla(214, 4%, 65%, 0.779), 0 0 0 5rem hsla(214, 4%, 65%, 0.4), 0 0 0 hsla(214, 4%, 65%, 0.2);
+    }
+    100% {
+        box-shadow: 0 0 0 3rem hsla(214, 4%, 65%, 0.779), 0 0 0 5rem hsla(214, 4%, 65%, 0.4), 0 0 0 7rem hsla(214, 4%, 65%, 0.2);
+    }
+
+    // from {
+    //     box-shadow: 0 0  2rem hsla(214, 4%, 65%, 0.779), 0 0 0 hsla(214, 4%, 65%, 0.4), 0 0 0 hsla(214, 4%, 65%, 0.2);
+    // }
+    // to {
+    //     box-shadow: 0 0 0 3rem hsla(214, 4%, 65%, 0.779), 0 0 0 5rem hsla(214, 4%, 65%, 0.4), 0 0 0 7rem hsla(214, 4%, 65%, 0.2);
+    // } 
 }
