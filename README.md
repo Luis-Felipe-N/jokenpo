@@ -10,7 +10,7 @@ Projeto de um game(Pedra, Papel, Tesoura) feito em javascript com layout propost
 </p>
 
 <h4 align="center"> 
-	✔️ 🚀 Em Construção  ✔️
+	✔️ 🚀 Concluido  ✔️
 </h4>
 
 <p align="center">
